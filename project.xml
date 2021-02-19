@@ -1,0 +1,17 @@
+<library>
+  <repositories>
+    <repository>
+      <path>${HOME}/gitclones/modm/repo.lb</path>
+    </repository>
+  </repositories>
+
+  <extends>modm:nucleo-f767zi</extends>
+  <options>
+    <option name="modm:build:build.path">build/nucleo_f767zi/modm_ethernet</option>
+  </options>
+  <modules>
+    <module>modm:build:scons</module>
+    <module>modm:freertos:tcp:lan8720a</module>
+    <module>modm:processing:rtos</module>
+  </modules>
+</library>

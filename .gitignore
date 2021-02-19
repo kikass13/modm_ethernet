@@ -1,0 +1,5 @@
+modm/
+build/
+SConstruct
+*.dblite
+*.log
