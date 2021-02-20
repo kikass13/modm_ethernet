@@ -3,19 +3,16 @@
 #include <modm/board.hpp>
 #include <modm/processing/rtos.hpp>
 
-template <typename GPIO_T>
-class LedTask: modm::rtos::Thread
-{
+template <typename GPIO_T> class LedTask : modm::rtos::Thread {
 public:
-	LedTask(): Thread(5, 1<<10) {}
-	void run()
-	{
-		MODM_LOG_DEBUG << "  -- Led blink task run()" << modm::endl;
-		GPIO_T::setOutput();
-		while (true)
-		{
-			sleep(500 * MILLISECONDS);
-			GPIO_T::toggle();
-		}
-	}
+    LedTask()
+        : Thread(5, 1 << 10) { }
+    void run() {
+        MODM_LOG_DEBUG << "  -- Led blink task run()" << modm::endl;
+        GPIO_T::setOutput();
+        while (true) {
+            sleep(500 * MILLISECONDS);
+            GPIO_T::toggle();
+        }
+    }
 };

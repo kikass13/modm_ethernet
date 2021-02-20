@@ -1,0 +1,11 @@
+﻿---
+BasedOnStyle: WebKit
+AlignAfterOpenBracket: AlwaysBreak
+BinPackArguments: 'false'
+ColumnLimit: '120'
+FixNamespaceComments: 'true'
+UseTab: Never
+BreakBeforeBraces: Custom
+BraceWrapping:
+  SplitEmptyFunction: false
+...
