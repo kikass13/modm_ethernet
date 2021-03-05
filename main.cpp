@@ -56,7 +56,7 @@ int main() {
     eth.initialize();
     // initialize tasks we want to run later
     LedTask<Board::LedRed> p0;
-    SchedulerUtils::SchedulerWatchdogTask p1;
+    //SchedulerUtils::SchedulerWatchdogTask p1;
     MODM_LOG_INFO << "Initializing scheduler" << modm::endl;
     modm::rtos::Scheduler::schedule();
 
