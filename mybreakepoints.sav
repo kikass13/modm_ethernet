@@ -1,0 +1,6 @@
+break main
+break modm/ext/freertos_plus_tcp/modm_lan8720a.cpp:560
+break modm/ext/freertos_plus_tcp/modm_lan8720a.cpp:432
+break modm/ext/freertos_plus_tcp/modm_lan8720a.cpp:ETH_IRQHandler()
+break modm/ext/freertos_plus_tcp/modm_lan8720a.cpp:498
+break modm/ext/freertos_plus_tcp/FreeRTOS_ARP.c:eARPProcessPacket
