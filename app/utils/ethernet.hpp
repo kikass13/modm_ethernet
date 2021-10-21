@@ -12,7 +12,7 @@
 #include <functional>
 
 #define MAC_ADDRESS 0x02, 0x00, 0x00, 0x00, 0x00, 0x00
-#define IP_ADDRESS 192, 168, 1, 1
+#define IP_ADDRESS 192, 168, 1, 100
 #define SUBNETMASK 255, 255, 255, 0
 #define GATEWAY_ADDRESS 0, 0, 0, 0
 #define DNS_ADDRESS 0, 0, 0, 0

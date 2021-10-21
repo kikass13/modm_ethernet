@@ -1,5 +1,13 @@
 modm/
 build/
 SConstruct
-*.dblite
+
+tools/*
+
+app/build/
+app/*modm*/
+
+*.gdb
 *.log
+*.dblite
+*.vscode
