@@ -42,7 +42,7 @@ namespace EthernetUtils {
 class NetworkInitTask : modm::rtos::Thread {
 public:
     NetworkInitTask()
-        : Thread(5, 2048, "NetworkInitalization") { }
+        : Thread(configMAX_PRIORITIES-2, 2048, "NetworkInitalization") { }
 
     void run() {
         MODM_LOG_DEBUG << "  -- Network initialization task run()" << modm::endl;

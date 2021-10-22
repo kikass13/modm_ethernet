@@ -6,7 +6,7 @@
 template <typename GPIO_T> class LedTask : modm::rtos::Thread {
 public:
     LedTask()
-        : Thread(5, 1 << 10) { }
+        : Thread(configMAX_PRIORITIES-1, 1 << 10) { }
     void run() {
         MODM_LOG_DEBUG << "  -- Led blink task run()" << modm::endl;
         GPIO_T::setOutput();

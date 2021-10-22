@@ -100,7 +100,7 @@ public:
                 HttpConnection::name,
                 configMINIMAL_STACK_SIZE * 5,
                 reinterpret_cast<void*>(connectedSocket),
-                configMAX_PRIORITIES,
+                configMAX_PRIORITIES -2,
                 0);
         }
     }

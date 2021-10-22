@@ -34,13 +34,15 @@ static void onEthUp() {
             HttpServerListener::name,
             configMINIMAL_STACK_SIZE * 2,
             0,
-            configMAX_PRIORITIES + 1,
+            configMAX_PRIORITIES - 1 ,
             0);
         ethTasksCreated = true;
     }
 }
 
 static void onEthDown() { }
+
+LedTask<Board::LedRed> p0;
 
 int main() {
     Board::initialize();
@@ -55,7 +57,6 @@ int main() {
     MODM_LOG_INFO << "Initialzing ethernet interface ..." << modm::endl;
     eth.initialize();
     // initialize tasks we want to run later
-    LedTask<Board::LedRed> p0;
     //SchedulerUtils::SchedulerWatchdogTask p1;
     MODM_LOG_INFO << "Initializing scheduler" << modm::endl;
     modm::rtos::Scheduler::schedule();

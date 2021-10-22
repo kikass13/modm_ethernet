@@ -26,7 +26,7 @@ private:
 class SchedulerInfoGathererTask : modm::rtos::Thread {
 public:
     SchedulerInfoGathererTask()
-        : Thread(11, 1 << 10, "SchedulerInfoGatherer")
+        : Thread(configMAX_PRIORITIES-1, 1 << 10, "SchedulerInfoGatherer")
         , schedulerInfo_ {} { }
     void run() {
         MODM_LOG_DEBUG << "  -- Scheduler watchdog gatherer run()" << modm::endl;
@@ -53,7 +53,7 @@ modm::IOStream& operator<<(modm::IOStream& out, const SchedulerInfo& si) {
 class SchedulerWatchdogTask : modm::rtos::Thread {
 public:
     SchedulerWatchdogTask()
-        : Thread(10, 1 << 10, "SchedulerWatchdog")
+        : Thread(configMAX_PRIORITIES-1, 1 << 10, "SchedulerWatchdog")
         , gathererTask_ {} { }
     void run() {
         MODM_LOG_DEBUG << "  -- Scheduler watchdog task run()" << modm::endl;
